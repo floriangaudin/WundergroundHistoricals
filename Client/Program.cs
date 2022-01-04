@@ -9,8 +9,6 @@ namespace Client
     {
         static async Task Main(string[] args)
         {
-
-            //args = new string[] { "gather", "--station", "ibreto2", "--path", @"C:\app", "--date", "25/12/2021"};
             await Parser.Default.ParseArguments<GatherOptions>(args)
                 .WithParsedAsync(opts => RunGather(opts));
         }
